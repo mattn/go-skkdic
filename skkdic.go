@@ -47,7 +47,7 @@ func (d *Dict) SearchOkuriNasi(s string) []Entry {
 	return ret
 }
 
-func NewDict() *Dict {
+func New() *Dict {
 	return &Dict{}
 }
 
