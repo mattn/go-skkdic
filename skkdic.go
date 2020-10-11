@@ -47,6 +47,16 @@ func (d *Dict) SearchOkuriNasi(s string) []Entry {
 	return ret
 }
 
+func (d *Dict) SearchOkuriNasiPrefix(s string) []Entry {
+	ret := make([]Entry, 0)
+	for _, e := range d.okuriNasi {
+		if strings.HasPrefix(e.Label, s) {
+			ret = append(ret, e)
+		}
+	}
+	return ret
+}
+
 func New() *Dict {
 	return &Dict{}
 }
